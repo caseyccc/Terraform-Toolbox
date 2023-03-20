@@ -12,7 +12,7 @@ Create an Elastic IP and assign it to this Ubuntu instance
 Create a VPC that will host everying
 Create an IGW that will allow for browsing to and inside this Ubuntu instance
 Create a Subnet inside the VPC 
-Create a Route Table to ensure traffic is routed
+Create a Route Table to ensure traffic is test routed
 Create a Route Table Association
 Create a Security Group allowing for SSH access
 
