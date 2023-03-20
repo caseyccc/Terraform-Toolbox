@@ -83,3 +83,7 @@ resource "aws_eip" "Casey_TF_Elastic_IP" {
   depends_on = [aws_internet_gateway.Casey_TF_IGW, aws_instance.Casey_TF_EC2_Ubuntu]                   
   
 }
+
+output "Ubuntu1_Public_IP" {
+  value = aws_eip.Casey_TF_Elastic_IP.public_ip
+}
