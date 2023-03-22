@@ -6,10 +6,9 @@ resource "aws_vpc" "Casey_TF_VPC" {
   instance_tenancy                                         = "default"
 
   tags = {
-    Name = "Casey_TF_VPC"
+    Name = "TF_VPC"
     Department = "CS"
-    Department = "CS"
-    Owner = "Casey"
+    Owner = var.Owner_Name
     Temp = "True"
   }
 }
@@ -21,10 +20,9 @@ resource "aws_subnet" "Casey_TF_Subnet" {
   availability_zone                                        = "us-west-2a"
 
   tags = {
-    Name = "Casey_TF_Subnet"
+    Name = "TF_Subnet"
     Department = "CS"
-    Department = "CS"
-    Owner = "Casey"
+    Owner = var.Owner_Name
     Temp = "True"
   }
 }
@@ -34,10 +32,9 @@ resource "aws_internet_gateway" "Casey_TF_IGW" {
   vpc_id                                                  = aws_vpc.Casey_TF_VPC.id
 
   tags = {
-    Name = "Casey_TF_IGW"
+    Name = "TF_IGW"
     Department = "CS"
-    Department = "CS"
-    Owner = "Casey"
+    Owner = var.Owner_Name
     Temp = "True"
   }
 }
@@ -57,10 +54,9 @@ resource "aws_route_table" "Casey_TF_Route_Table" {
   }  
 
   tags = {
-    Name = "Casey_TF_IGW"
+    Name = "TF_Route_Table"
     Department = "CS"
-    Department = "CS"
-    Owner = "Casey"
+    Owner = var.Owner_Name
     Temp = "True"
   }
 }
